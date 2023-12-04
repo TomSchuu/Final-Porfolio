@@ -1,0 +1,135 @@
+:root {
+    --color-body: #000;
+    --color-heading: white;
+    --color-text: #EBEBEB;
+    --color-icons: #EBEBEB;
+    --font-primary: 'Raleway', sans-serif;
+}
+
+/* Adjust bootstraps dark theme */
+body[data-bs-theme="dark"] {
+    background-color: var(--color-body)
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-primary);
+}
+
+body {
+    /* background-color: var(--color-body); */
+}
+
+/* ------------ NAVBAR ------------ */
+
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+/* .navbar-brand {
+    transition: transform ease 0.3s;
+}
+
+.navbar .container .navbar-brand:hover {
+    transform: translateY(-3px);
+} */
+
+.navbar-collapse {
+    height: 100vh;
+}
+
+.nav-item-container {
+    background-color: rgb(10,10,10);
+}
+
+.nav-item {
+    color: var(--color-text);
+    font-size: 1.5em;
+    transition: transform ease 0.3s;
+}
+
+.nav-item:hover {
+    border: 5px solid white;
+    transform: translateY(-10px);
+}
+
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+
+/* POSITION THEME TOGGLE */
+label.theme-label-on {
+    position: fixed;
+    z-index: 10000;
+    top: 90%;
+    left: 80%;
+    cursor: pointer;
+}
+
+label.theme-label-off {
+    position: fixed;
+    z-index: 10000;
+    top: 90%;
+    left: 80%;
+    cursor: pointer;
+}
+
+/*-------Hero Section-------*/
+
+#heading {
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(90deg, black, white, black);
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+    background-clip: text; /* Default */
+    -webkit-background-clip: text; /* Affects Chrome and Safari */
+    -moz-background-clip: text; /* Affects Firefox */
+    color: rgba(200,200,200,0.5); /* Match color with grayed out navbar */
+    animation: shiny-text 2s ease-in infinite;
+}
+
+.lead {
+    color: var(--color-text);
+}
+
+@keyframes shiny-text {
+    0% { background-position: -500%; }
+    100% { background-position: 500%; }
+}
+
+/* Icons */
+
+.bi-apple {
+    font-size: 4em;
+    color: var(--color-icons);
+}
+
+@media only screen and (min-width: 992px) {
+    #icon-links {
+        flex-direction: column;
+    }
+
+    #heading {
+        font-size: 9em;
+    }
+}
+
+
+.progress {
+    margin-bottom: 10px;
+}
+
+/* Contact Page */
+#contact-container {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* ty w3schools */
+}
