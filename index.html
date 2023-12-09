@@ -22,9 +22,7 @@
 </head>
 
 <body data-bs-theme="dark"> 
-    <input type="checkbox" name="page-theme" id="dark-theme">
-    <label class="theme-label-on display-6" for="dark-theme">[ dark mode: on ]</label>
-    <label class="theme-label-off display-6" for="dark-theme">[ dark mode: off ]</label>
+    <label class="theme-label-on display-6 in-dev" for="dark-theme" title="In Development... Check out The Contact Page!">[ dark mode: on ]</label>
 
     <!--Navbar-->
     <nav class="navbar fixed-top">
@@ -37,7 +35,7 @@
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="bi bi-app mb-5" style="font-size: 1em;"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -45,11 +43,11 @@
                     <div class="row h-100">
                         
                         <div class="col-6 nav-item-container">
-                            <a class="nav-item nav-link active h-100 w-100 d-flex align-items-center justify-content-center" href="index.html">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link active h-100 w-100 d-flex align-items-center justify-content-center" href="index.html">Home<span class="sr-only">&nbsp; &lt;-</span></a>
                         </div>
 
                         <div class="col-6 nav-item-container">
-                            <a class="nav-item nav-link d-flex align-items-center justify-content-center h-100 w-100" href="cv.html">CV</a>
+                            <a class="nav-item nav-link d-flex align-items-center justify-content-center h-100 w-100" href="cv.html">Resume</a>
                         </div>
                         
                     </div>
@@ -72,65 +70,74 @@
         </div>
     </nav>
 
-
     <!--<About Me>-->
     <div class="container h-100">
         <div class="row ml-auto h-100">
-            <div class="col-lg-10 d-flex flex-column justify-content-center">
+            <div class="col-lg-10 d-flex flex-column justify-content-center" id="hero-text">
                 <h1 class="display-1" id="heading">Tom Schuster</h1>
-                <p class="lead">Aspiring Full-Stack Developer</p>
+                <p class="text-light">Aspiring Full-Stack Developer</p>
             </div>
             <div class="col-lg-2 d-flex align-items-center justify-content-center" id="icon-links">
-                <i class="bi bi-apple mb-5"></i>
-                <i class="bi bi-apple mb-5""></i>
-                <i class="bi bi-apple mb-5""></i>
+                <a href="https://github.com/tomschuu" class="mb-5"><i class="bi bi-github logo-link"></i></a>
+                <a href="https://linkedin.com" class="mb-5"><i class="bi bi-linkedin logo-link-middle"></i></a>
+                <a href="https://x.com" class="mb-5"><i class="bi bi-twitter-x logo-link"></i></a>
             </div>
         </div>
         <p class="position-absolute bottom-0">Keep Scrolling !</p>
     </div>
 
     <!--<Overview>-->
-    <div class="container border border-primary">
+    <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h3 class="display-3 border border-primary">Who am i</h3>
+                <h3 class="display-3">Who am i</h3>
+                <p class="text-light">Hey! 👋 I'm an 18-year-old tech enthusiast with a passion for all things development. I'm from Germany, however, I currently reside in Canada where I'm refining my software development skills. I love exploring new technologies, dev stacks, and libraries to further my understanding and expertise in a never-ending journey to find the most creative and innovative tech. With great curiosity, I am constantly delving into new projects to showcase here, on my portfolio. Otherwise, I am a full-time computer science student aiming to enhance my technical ability and meet collaborative like-minded individuals. I'm excited to contribute to new projects, collaborate, and use technology to make a meaningful impact. My e-portfolio encapsulates this, serving as my advancement record and place to direct new people like you!</p>
             </div>
             <div class="col-lg-6">
-                <img src="https://placehold.co/600x400" class="img-fluid" alt="placeholder">
+                <img src="images/me.png" class="img-fluid" alt="placeholder">
             </div>
         </div>
     </div>
 
-    <div class="container border border-primary">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="display-3 border border-primary">Proficiency</h3>
+                <hr>
+
+                <h3 class="display-3">Proficiency</h3>
+                
+                <p class="text-light">Python</p>
                 <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar" style="width: 0%"></div>
-                  </div>
-                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 71%"></div>
+                </div>
+                <p class="text-light">Java</p>
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                     <div class="progress-bar" style="width: 25%"></div>
-                  </div>
-                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar" style="width: 50%"></div>
-                  </div>
-                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar" style="width: 75%"></div>
-                  </div>
-                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar" style="width: 100%"></div>
-                  </div>
+                </div>
+                <p class="text-light">HTML CSS</p>
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 55%"></div>
+                </div>
+                <p class="text-light">Git</p>
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 25%"></div>
+                </div>
+                <p class="text-light">Rust</p>
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 10%"></div>
+                </div>
             </div>
         </div>
     </div>
 
     <!--<Footer>-->
-    <footer class="py-4 text-secondary text-center">
-        <div class="container">
-            <p>Copyright 2023 Tom Schuster</p>
-        </div>
-    </footer>
-
+    <div class="container">
+        <footer class="py-4 text-secondary text-center">
+            <div class="container">
+                <p>Copyright 2023 Tom Schuster</p>
+            </div>
+        </footer>
+    </div>
 
     <!--<Ignore Required JavaScript>-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

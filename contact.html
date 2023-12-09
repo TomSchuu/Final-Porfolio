@@ -23,6 +23,12 @@
     <title>Tom Schuster Portfolio | Welcome</title>
 
     <!--<CSS For Dark/Light Mode toggle. Differs per page>-->
+    <!--
+        NOTE: Bootstrap recommeds doing this by targeting the data-bs-theme='{light/dark}' attribute with JS, 
+        so this is the workaround based on the example from week 5
+
+        This page was a fun proof of concept. However this method is not practical for my other pages.
+    -->
     <style>
         input#dark-theme {
             display: none;
@@ -37,10 +43,10 @@
             display: none;
         }
 
-        input#dark-theme:checked~.container-fluid i.bi-apple,
+        input#dark-theme:checked~.container-fluid i.bi-app,
         input#dark-theme:checked~.container-fluid .navbar-brand,
         input#dark-theme:checked~.theme-label-off,
-        input#dark-theme:checked~.container-fluid .container .row .col-lg-8 .text-capitalize,
+        input#dark-theme:checked~.container-fluid .container .row .text-capitalize,
         input#dark-theme:checked~.container-fluid .navbar-nav .nav-link {
             color: black;
         }
@@ -48,6 +54,7 @@
         input#dark-theme:checked~.container-fluid .navbar-nav .nav-item-container {
             background-color: white;
         }
+
         /* END OF LIGHT MODE */
 
         /* DARK MODE */
@@ -55,10 +62,10 @@
             background-image: url(images/icons.jpg);
         }
 
-        input#dark-theme:not(:checked)~.container-fluid i.bi-apple,
+        input#dark-theme:not(:checked)~.container-fluid i.bi-app,
         input#dark-theme:not(:checked)~.container-fluid .navbar-brand,
         input#dark-theme:not(:checked)~.theme-label-on,
-        input#dark-theme:not(:checked)~.container-fluid .container .row .col-lg-8 .text-capitalize,
+        input#dark-theme:not(:checked)~.container-fluid .container .row .text-capitalize,
         input#dark-theme:not(:checked)~.container-fluid .navbar-nav .nav-link {
             color: white;
         }
@@ -76,8 +83,10 @@
     <label class="theme-label-on display-6" for="dark-theme">[ dark mode: on ]</label>
     <label class="theme-label-off display-6" for="dark-theme">[ dark mode: off ]</label>
 
-    <!--Navbar-->
+    
     <div class="container-fluid vh-100 background">
+        
+        <!--Navbar-->
         <nav class="navbar fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
@@ -86,10 +95,10 @@
                     </span>
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" id="navbar-button"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <i class="bi bi-apple mb-5" style="font-size: 1em;"></i>
+                    <i class="bi bi-app mb-5" style="font-size: 1em;"></i>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -98,12 +107,12 @@
 
                             <div class="col-6 nav-item-container">
                                 <a class="nav-item nav-link active h-100 w-100 d-flex align-items-center justify-content-center"
-                                    href="index.html">Home<span class="sr-only">(current)</span></a>
+                                    href="index.html">Home</a>
                             </div>
 
                             <div class="col-6 nav-item-container">
                                 <a class="nav-item nav-link d-flex align-items-center justify-content-center h-100 w-100"
-                                    href="cv.html">CV</a>
+                                    href="cv.html">Resume</a>
                             </div>
 
                         </div>
@@ -116,7 +125,7 @@
 
                             <div class="col-6 nav-item-container">
                                 <a class="nav-item nav-link d-flex align-items-center justify-content-center h-100 w-100"
-                                    href="contact.html">Contact</a>
+                                    href="contact.html">Contact<span class="sr-only">&nbsp; &lt;-</span></a>
                             </div>
 
                         </div>
@@ -128,26 +137,26 @@
             </div>
         </nav>
 
+        <!-- Contact Form -->
         <div class="container h-100 d-flex align-items-center justify-content-center">
-            <div class="row d-flex justify-content-center w-50 p-5" id="contact-container">
-                <div class="col-lg-8">
+            <div class="row d-flex justify-content-center p-5" id="contact-container">
+                <div class="col-lg-11 col-sm-12">
                     <h1 class="text-center text-capitalize">have an app idea?</h1>
-                    <form class="form-floating">
+                    <form class="form-floating" action="mailto:MichealScott@gmail.com" method="get" enctype="text/plain">
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">Email address</label>
                         </div>
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                                style="height: 100px"></textarea>
+                                style="height:150px"></textarea>
                             <label for="floatingTextarea2">Description</label>
                         </div>
-                        <button type="submit" class="btn btn-dark">Submit</button>
+                        <button type="submit" value="send" class="btn btn-dark">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
-
     </div>
 
 

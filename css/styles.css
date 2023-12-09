@@ -3,6 +3,7 @@
     --color-heading: white;
     --color-text: #EBEBEB;
     --color-icons: #EBEBEB;
+    --color-icons-hover: rgb(209, 209, 255);
     --font-primary: 'Raleway', sans-serif;
 }
 
@@ -18,24 +19,13 @@ html, body {
     font-family: var(--font-primary);
 }
 
-body {
-    /* background-color: var(--color-body); */
-}
-
-/* ------------ NAVBAR ------------ */
+/* -------------------------------------- NAVBAR -------------------------------------- */
+/*--------------------------------------------------------------------------------------*/
 
 .navbar {
     background-color: transparent;
     backdrop-filter: blur(10px);
 }
-
-/* .navbar-brand {
-    transition: transform ease 0.3s;
-}
-
-.navbar .container .navbar-brand:hover {
-    transform: translateY(-3px);
-} */
 
 .navbar-collapse {
     height: 100vh;
@@ -79,10 +69,23 @@ label.theme-label-off {
     cursor: pointer;
 }
 
-/*-------Hero Section-------*/
+@media only screen and (max-width: 1518px) {
+    label.theme-label-on {
+        top: 90%;
+        left: 3em
+    }
+
+    label.theme-label-off {
+        top: 90%;
+        left: 3em
+    }
+}
+
+/*---------------------------------HOME/ABOUT ME PAGE---------------------------------*/
+/*------------------------------------------------------------------------------------*/
 
 #heading {
-    font-size: 3rem;
+    font-size: 5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(90deg, black, white, black);
     background-repeat: no-repeat;
@@ -90,12 +93,12 @@ label.theme-label-off {
     background-clip: text; /* Default */
     -webkit-background-clip: text; /* Affects Chrome and Safari */
     -moz-background-clip: text; /* Affects Firefox */
-    color: rgba(200,200,200,0.5); /* Match color with grayed out navbar */
+    color: rgba(200,200,200,0.5);
     animation: shiny-text 2s ease-in infinite;
 }
 
-.lead {
-    color: var(--color-text);
+#hero-text {
+    text-align: center;
 }
 
 @keyframes shiny-text {
@@ -103,11 +106,30 @@ label.theme-label-off {
     100% { background-position: 500%; }
 }
 
-/* Icons */
+.logo-link {
+    padding: 45px;
+}
 
-.bi-apple {
+.logo-link {
     font-size: 4em;
     color: var(--color-icons);
+}
+
+.logo-link-middle {
+    font-size: 4em;
+    color: rgb(0, 119, 181);
+}
+
+.logo-link:hover {
+    color: var(--color-icons-hover);
+}
+
+.logo-link-middle:hover {
+    color: var(--color-icons-hover);
+}
+
+.in-dev {
+    display: none;
 }
 
 @media only screen and (min-width: 992px) {
@@ -118,18 +140,80 @@ label.theme-label-off {
     #heading {
         font-size: 9em;
     }
-}
 
+    .in-dev {
+        display: block;
+    }
+
+    #hero-text {
+        text-align: start;
+    }
+}
 
 .progress {
     margin-bottom: 10px;
 }
 
-/* Contact Page */
+/*--------------------------------PROJECTS PAGE---------------------------------*/
+/*------------------------------------------------------------------------------*/
+
+.showcase-overlay {
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+}
+
+.showcase-overlay a {
+    text-decoration: none;
+    color: inherit;
+    color: lightblue;
+}
+
+.showcase-overlay:hover {
+    opacity: 0.85 !important;
+}
+
+.img-fluid {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .showcase-container {
+        margin-bottom: 20px; /* Add margin-bottom between stacked items */
+    }
+}
+/*-----------------------------------RESUME PAGE------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+#blue-container {
+    background-color: rgba(173, 216, 230, 0.2);
+}
+
+@media only screen and (max-width: 991px) {
+    .resume {
+        margin-top: 5vh;
+    }
+
+    
+    #blue-container {
+        border: none !important; /* Override the bootstrap class */
+    }
+}
+
+
+/*---------------------------------CONTACT PAGE----------------------------------*/
+/*-------------------------------------------------------------------------------*/
 #contact-container {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background-color: rgba(255,255,255,0.07);
-    border-radius: 50px;
+    border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* ty w3schools */
+}
+
+@media only screen and (max-width: 991px) {
+    .contact-container {
+        width: 90vw !important;
+    }
 }

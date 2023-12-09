@@ -7,15 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--<Bootstrap CSS>-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <!--<Custom CSS>-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-    <title>Tom Schuster Portfolio | CV</title>
+    <title>Tom Schuster Portfolio | Welcome</title>
 </head>
 
 <body data-bs-theme="dark">
+    
+    <!-- Modal -->
+    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="downloadModalLabel">Resume</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Download Resume?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a class="btn btn-light" href="files/Resume.pdf" download="Resume">Download</a>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+
     <!--Navbar-->
     <nav class="navbar fixed-top">
         <div class="container-fluid">
@@ -27,7 +57,7 @@
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="bi bi-app mb-5" style="font-size: 1em;"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -35,11 +65,11 @@
                     <div class="row h-100">
                         
                         <div class="col-6 nav-item-container">
-                            <a class="nav-item nav-link active h-100 w-100 d-flex align-items-center justify-content-center" href="index.html">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link active h-100 w-100 d-flex align-items-center justify-content-center" href="index.html">Home</a>
                         </div>
 
                         <div class="col-6 nav-item-container">
-                            <a class="nav-item nav-link d-flex align-items-center justify-content-center h-100 w-100" href="cv.html">CV</a>
+                            <a class="nav-item nav-link d-flex align-items-center justify-content-center h-100 w-100" href="cv.html">Resume<span class="sr-only">&nbsp; &lt;-</span></a>
                         </div>
                         
                     </div>
@@ -62,23 +92,70 @@
         </div>
     </nav>
 
-    <div class="container h-75">
-        <h1>Resume</h1>
-        <div class="row h-100 border rounded border-white">
-            <div class="col-lg-6">
-                <h1>Education</h1>
+    <div class="container pt-5 position-relative">
+        <a type="button" class="position-absolute h-100 w-100 start-0 bottom-0" data-bs-toggle="modal" data-bs-target="#downloadModal"></a>
+            <div class="row h-75 ">
+                <div class="col-lg-6 mt-5 p-5 resume border-top border-start border-2 border-primary" id="blue-container">
+                    <h1>Education</h1>
+                    <ul>
+                        <li>
+                            <span class="fw-bold fst-italic">Diploma, Information and Computer Systems Technology, Camosun College</span>
+                            <span class="fw-light">September 2023 - Expected Completion April 2025</span><br>
+                            Developing Technologies: Java, C, C++, Python, JavaScript, bash
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 mt-5 p-5 resume border-top border-end border-2 border-light">
+                    <h1>Expierence</h1>
+                    <ul>
+                        <li>
+                            <span class="fw-bold fst-italic">Scorpion Plumbing, 482 Hansen Avenue, Victoria,</span> - Assistant<br>
+                            <span class="fw-lighter">Summer 2022</span>
+                            <ul>
+                                <li>Was a general assistant, became invested and educated into the service industry, and gained countless practical skills</li>
+                                <li>Helped organize equipment and carried out instructions as given</li>
+                                <li>Communicated with clients about job satisfaction and requirements</li>
+                                <li>Wrote technical reports to summarize materials and financials as required</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <h1>Education</h1>
+            <div class="row h-50">
+                <div class="col-lg-6 p-5 resume border-bottom border-start border-2 border-light">
+                    <h1>Relevant Skills</h1>
+                    <ul>
+                        <li>
+                            <span class="fw-bold">Technical Writing and Communication</span><br>
+                            Experience summarizing and writing technical reports while communicating with clients about solutions, job
+                            requirements, and materials
+                        </li>
+                        <li>
+                            <span class="fw-bold">Microsoft Office and Google Suite</span><br>
+                            Actively engage with both Microsoft and Google's extensive product list everyday to produce results for classes and
+                            display personal projects
+                        </li>
+                    </ul>
+                    
+
+                </div>
+                <div class="col-lg-6 p-5 resume border-bottom border-end border-2 border-primary" id="blue-container">
+                    <h1>Refrences</h1>
+                    <span class="fst-italic">Available upon Request</span>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <h1>Education</h1>
-            </div>
-            <div class="col-lg-6">
-                <h1>Education</h1>
-            </div>
-        </div>
+        </a>
     </div>
+
+    <!--<Footer>-->
+    <div class="container">
+        <footer class="py-4 text-secondary text-center">
+            <div class="container">
+                <p>Copyright 2023 Tom Schuster</p>
+            </div>
+        </footer>
+    </div>
+    
 
     <!--<Ignore Required JavaScript>-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
